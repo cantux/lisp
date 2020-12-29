@@ -31,16 +31,4 @@ Geometry formalizes the notion of space time and later led to axiomatic methods 
 By analogy to geometry Computer Science is not really about computers. It is about dealing with imperative, "HOW IS", kind of knowledge.
 
 
-## Chapter 1
-
-### Languages - Lisp (List Processor)
-
-* Primitive Elements
-* Means of combinations
-* Means of abstraction
-
-A combination consists of operators(func name, e.g ''+'' symbol)  and operands(arguments).
-
-Lisp editors help with indenting operands in a combination.
-
 

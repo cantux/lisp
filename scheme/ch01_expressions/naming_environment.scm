@@ -2,9 +2,9 @@
 
 (* 5 size)
 
-
 (define pi 3.14)
 
+; syntactic sugar for defining procedures
 (define (square x) (* x x))
 
 (define (area_of_circle radius) 
@@ -14,6 +14,7 @@
     )
   )
 
+; the way define works
 (define circumference 
   (lambda(rad) (* 2 pi rad)))
 )

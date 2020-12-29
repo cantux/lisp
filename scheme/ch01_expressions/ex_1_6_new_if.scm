@@ -1,8 +1,19 @@
-(define pythagoras 
-  (lambda(a b)
-    (root (+ (square a) (square b)))
+; here we see the difference between the special form if clause between a procedure
+;
+; assume we created our if procedure
+
+(define new-if 
+  (lambda(predicate then_clause else_clause)
+    (cond 
+      (predicate then_clause)
+      (else else_clause)
+      )
     )
   )
+
+; exercise is to consider what might fo wrong if we replaced if "special form" with the procedure above.
+; spoiler, because of the applicative order of execution
+
 
 (define root
   (lambda(a)
@@ -33,7 +44,7 @@
 
     (define root_int
       (lambda(a guess)
-        (if 
+        (new-if 
           (close_enough 
             a 
             (square guess)
@@ -44,10 +55,9 @@
         )
       )
 
-    (root_int a 1.0)
+    (root_int a 1)
     )
   )
 
-(root 9.0)
-(pythagoras 3 4)
+(root 9)
 
