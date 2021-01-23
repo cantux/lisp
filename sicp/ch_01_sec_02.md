@@ -26,7 +26,9 @@ Factorial
 ### 2.2 Tre Recursion
 
 Fibonacci
-Coin Change
+
+#### Counting Change Change
+
 
 ### 2.3 Orders of Growth
 
@@ -58,4 +60,39 @@ Use a little arithmetic trick to make this logarithmic complexity.
 
 ^2 = b^2n..
 
-ex 2.19 wut sadge
+#### 5Head ex 2.19
+
+
+### 2.5 Greates Common Divisor
+
+Idea of GCD Algo is that if _r_ is the remainder when _a_ is dividied by _b_ 
+then the common divisors of a and b are precisely the same as the common divisors of b and r.
+
+Thus, GCD(a,b) = GCD(b,r)
+
+
+#### 5Head Lame's Theorem
+
+If Euclid's algo takes k steps to compute the GCD of some pair, 
+then the smaller number must be greater or equal to the kth Fibonacci number.
+
+Proof:
+
+Some pair (a_k, b_k) where a_k >= b_k for which Euclid's algo terminate in k steps.
+
+Claim: 
+
+if (a_k+1, b_k+1) -> (a_k, b_k) -> (a_k-1, b_k-1) are successive pairs in the reduction process, then we must have b_k+1 >= b_k + b_k-1.
+
+To verify the claim, consider reduction step is defined by:
+
+a_k-1 = b_k and b_k-1 = a_k mod b_k
+
+Expanding second step: b_k-1 = a_k mod b_k ---> a_k = b_k * q + b_k-1
+
+This shows a_k >= b_k + b_k-1
+
+In the previous step we had b_k+1 = a_k
+
+
+
